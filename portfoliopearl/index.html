@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ====================================================================
+       PAGE TITLE & META
+       ==================================================================== -->
+  <title>Database Administrator & Computer Engineering Portfolio</title>
+  <meta name="description" content="Portfolio of a Computer Engineering student and aspiring Database Administrator specializing in MySQL, database design, SQL querying, data integrity, and web applications.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP NAVIGATION BAR
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      
+      <!-- Brand Logo (CHANGE YOUR NAME / ROLE HERE) -->
+      <a href="#home" class="brand-logo" aria-label="Portfolio Home">
+        <svg class="brand-icon" width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Database Monogram Symbol -->
+          <ellipse cx="20" cy="11" rx="14" ry="5.5" stroke="#DFC69E" stroke-width="2.2"/>
+          <path d="M6 11v8c0 3 6.3 5.5 14 5.5s14-2.5 14-5.5v-8" stroke="#DFC69E" stroke-width="2.2"/>
+          <path d="M6 19v8c0 3 6.3 5.5 14 5.5s14-2.5 14-5.5v-8" stroke="#DFC69E" stroke-width="2.2"/>
+          <circle cx="28" cy="27" r="4.5" fill="#D1A56A"/>
+        </svg>
+        <div class="brand-text">
+          <!-- >>> EDIT BRAND NAME HERE <<< -->
+          <span class="brand-name">Pearl Alexa</span>
+          <!-- >>> EDIT ROLE / SUBTITLE HERE <<< -->
+          <span class="brand-role">DATABASE ADMINISTRATOR</span>
+        </div>
+      </a>
+
+      <!-- Center Navigation Links -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#what-i-do" class="nav-link">What I Do</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#toolkit" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Right "Let's Talk" Button -->
+      <a href="#contact" class="talk-btn" aria-label="Let's Talk">
+        <span>Let's Talk</span>
+        <svg class="talk-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#home" class="mobile-nav-link">Home</a>
+    <a href="#what-i-do" class="mobile-nav-link">What I Do</a>
+    <a href="#projects" class="mobile-nav-link">Projects</a>
+    <a href="#toolkit" class="mobile-nav-link">Skills</a>
+    <a href="#experience" class="mobile-nav-link">Education & Experience</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <a href="#contact" class="talk-btn mobile-talk-btn">
+      <span>Let's Talk</span>
+    </a>
+  </div>
+
+  <!-- ========================================================================
+       HERO SCROLL SECTION (CENTERED 3D ANIMATION + HERO INFORMATION)
+       ======================================================================== -->
+  <section class="hero-scroll-wrapper" id="home">
+    <div class="hero-sticky-stage">
+
+      <!-- Interactive 3D Canvas Visual (CENTERED PORTRAIT ANIMATION) -->
+      <div class="hero-canvas-frame">
+        <canvas id="animation-canvas"></canvas>
+      </div>
+
+      <!-- Hero Information Content Layer -->
+      <div class="hero-content-layer">
+        <div class="hero-grid-container">
+          
+          <div class="hero-info-column">
+            
+            <!-- Hello Greeting with Decorative Arc -->
+            <div class="hero-greeting-box">
+              <svg class="greeting-arc-svg" width="76" height="16" viewBox="0 0 76 16" fill="none">
+                <path d="M3 13C22 3 54 3 73 13" stroke="#D1A56A" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+              <!-- >>> EDIT GREETING BADGE TEXT HERE <<< -->
+              <span class="hero-greeting-text">HELLO, I'M</span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="hero-headline">
+              <!-- >>> EDIT YOUR MAIN NAME HERE <<< -->
+              <span class="headline-name">Pearl Alexa</span>
+              <!-- >>> EDIT HEADLINE LINE 1 HERE <<< -->
+              <span class="headline-core">I design & maintain databases</span>
+              <!-- >>> EDIT HEADLINE ITALIC LINE 2 HERE <<< -->
+              <span class="headline-italic">that keep systems reliable.</span>
+            </h1>
+
+            <!-- Descriptive Subtitle Paragraph -->
+            <!-- >>> EDIT HERO PARAGRAPH / BIO HERE <<< -->
+            <p class="hero-description">
+              Computer Engineering student interested in database management, data organization, and information systems. Aspiring Database Administrator focused on designing, maintaining, and securing databases efficiently.
+            </p>
+
+            <!-- Action Area: View My Work CTA + Education Stat -->
+            <div class="hero-action-row">
+              <!-- >>> EDIT CTA BUTTON TEXT HERE <<< -->
+              <a href="#projects" class="work-cta-btn">
+                <span>View My Projects</span>
+                <span class="arrow-glyph">→</span>
+              </a>
+
+              <!-- Experience / Education Stat Block -->
+              <div class="experience-block">
+                <!-- >>> EDIT DEGREE / INSTITUTION HERE <<< -->
+                <div class="exp-number">CpE</div>
+                <div class="exp-label">ICCT Colleges Cainta</div>
+                <!-- Hand-drawn squiggle underline -->
+                <svg class="exp-squiggle" width="68" height="12" viewBox="0 0 68 12" fill="none">
+                  <path d="M2 7C9 2 17 11 25 6C33 1 41 10 49 5C56 1 63 9 66 6" stroke="#D1A56A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Sleek Scroll Indicator -->
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <span class="indicator-text">SCROLL TO EXPLORE</span>
+        <div class="mouse-icon">
+          <div class="mouse-wheel-dot"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 1: WHAT I DO (DATABASE ADMINISTRATION SERVICES)
+       Layout matching reference image: Title & summary on left, 4 numbered cards on right
+       ======================================================================== -->
+  <section class="content-section" id="what-i-do">
+    <div class="section-wrapper">
+      
+      <div class="what-i-do-container">
+        
+        <!-- Left Title Column -->
+        <div class="what-title-col">
+          <div class="section-tag-row">
+            <h2 class="block-title">WHAT<br>I DO</h2>
+            <span class="title-star">✦</span>
+          </div>
+          <p class="what-summary">
+            I design, structure, and secure relational databases and information systems that ensure high data integrity, accurate query retrieval, and reliable performance.
+          </p>
+        </div>
+
+        <!-- Right 4-Card Service Grid -->
+        <div class="what-cards-grid">
+          
+          <!-- Card 01: Database Design -->
+          <div class="service-block-card">
+            <div class="card-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+            </div>
+            <h3 class="card-item-title">DATABASE DESIGN</h3>
+            <p class="card-item-desc">
+              Organizing structured schemas, entity relationships, primary & foreign keys, and normalized tables to prevent redundancy.
+            </p>
+            <div class="card-num-stamp">01</div>
+          </div>
+
+          <!-- Card 02: SQL & Querying -->
+          <div class="service-block-card">
+            <div class="card-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+                <line x1="14" y1="4" x2="10" y2="20"></line>
+              </svg>
+            </div>
+            <h3 class="card-item-title">SQL QUERYING</h3>
+            <p class="card-item-desc">
+              Writing precise SQL queries, joins, filtering, and data aggregation for fast, accurate retrieval of business information.
+            </p>
+            <div class="card-num-stamp">02</div>
+          </div>
+
+          <!-- Card 03: Data Integrity & Security -->
+          <div class="service-block-card">
+            <div class="card-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3 class="card-item-title">DATA INTEGRITY</h3>
+            <p class="card-item-desc">
+              Enforcing ACID compliance, validation constraints, and secure access permissions to safeguard vital organizational records.
+            </p>
+            <div class="card-num-stamp">03</div>
+          </div>
+
+          <!-- Card 04: System Integration -->
+          <div class="service-block-card">
+            <div class="card-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="card-item-title">DBMS INTEGRATION</h3>
+            <p class="card-item-desc">
+              Connecting MySQL databases to web applications using XAMPP, local test environments, and interactive frontend interfaces.
+            </p>
+            <div class="card-num-stamp">04</div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 2: FEATURED PROJECTS
+       Layout matching reference image: Title & "View All" top bar + 3 wide project cards
+       ======================================================================== -->
+  <section class="content-section alternate-bg" id="projects">
+    <div class="section-wrapper">
+      
+      <!-- Section Header Bar -->
+      <div class="section-header-bar">
+        <h2 class="block-title">FEATURED PROJECTS</h2>
+        <a href="#contact" class="view-all-link">
+          <span>VIEW ALL PROJECTS</span>
+          <span class="arrow-right-icon">→</span>
+        </a>
+      </div>
+
+      <!-- 3 Project Cards Grid -->
+      <div class="featured-projects-grid">
+        
+        <!-- Project 01: COE-Pay -->
+        <div class="project-showcase-card">
+          <!-- Card Visual Area -->
+          <div class="project-preview-box">
+            <div class="card-step-badge">01</div>
+            
+            <div class="project-mockup-content">
+              <div class="mockup-header-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="mockup-tag">COE-PAY DBMS</span>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-stat-card">
+                  <span class="stat-pill">Payment Queue</span>
+                  <div class="stat-value">₱142,500.00</div>
+                  <div class="stat-sub">Validated Transations • 99.8% Accuracy</div>
+                </div>
+                <div class="mockup-table-preview">
+                  <div class="table-row head">
+                    <span>REQ_ID</span>
+                    <span>STUDENT</span>
+                    <span>STATUS</span>
+                  </div>
+                  <div class="table-row">
+                    <span>#8402</span>
+                    <span>CpE Student</span>
+                    <span class="badge-success">VERIFIED</span>
+                  </div>
+                  <div class="table-row">
+                    <span>#8403</span>
+                    <span>CpE Student</span>
+                    <span class="badge-pending">PENDING</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Info Footer -->
+          <div class="project-card-footer">
+            <div class="project-text-group">
+              <h3 class="project-card-name">COE-PAY — PAYMENT SYSTEM</h3>
+              <p class="project-card-category">Web Development & Database Management</p>
+              <p class="project-card-details">
+                A web application concept designed to manage organizational payment requests and submissions. Organizes payment data, monitors status, and streamlines tracking.
+              </p>
+            </div>
+            <a href="#contact" class="project-action-btn" aria-label="View Project">
+              <span class="action-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 02: Personal Portfolio Website -->
+        <div class="project-showcase-card">
+          <!-- Card Visual Area -->
+          <div class="project-preview-box">
+            <div class="card-step-badge">02</div>
+            
+            <div class="project-mockup-content">
+              <div class="mockup-header-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="mockup-tag">PORTFOLIO ARCHITECTURE</span>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-stat-card">
+                  <span class="stat-pill">Interactive 3D Stage</span>
+                  <div class="stat-value">60 FPS Smooth Canvas</div>
+                  <div class="stat-sub">Linear Interpolation • Responsive Cover</div>
+                </div>
+                <div class="mockup-cards-row">
+                  <div class="mini-card">
+                    <span class="mini-label">Frontend</span>
+                    <span class="mini-val">HTML / CSS / JS</span>
+                  </div>
+                  <div class="mini-card">
+                    <span class="mini-label">Hosting</span>
+                    <span class="mini-val">GitHub Pages</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Info Footer -->
+          <div class="project-card-footer">
+            <div class="project-text-group">
+              <h3 class="project-card-name">PERSONAL PORTFOLIO WEBSITE</h3>
+              <p class="project-card-category">Web Development</p>
+              <p class="project-card-details">
+                Created to present academic background, technical skills, projects, and learning journey as a Computer Engineering student specializing in databases.
+              </p>
+            </div>
+            <a href="#contact" class="project-action-btn" aria-label="View Project">
+              <span class="action-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 03: Student Information & Database System -->
+        <div class="project-showcase-card">
+          <!-- Card Visual Area -->
+          <div class="project-preview-box">
+            <div class="card-step-badge">03</div>
+            
+            <div class="project-mockup-content">
+              <div class="mockup-header-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="mockup-tag">RELATIONAL SCHEMA</span>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-stat-card">
+                  <span class="stat-pill">MySQL Engine</span>
+                  <div class="stat-value">3NF Normalized Schema</div>
+                  <div class="stat-sub">InnoDB • Foreign Key Constraints</div>
+                </div>
+                <div class="mockup-code-preview">
+                  <code>SELECT s.name, e.course FROM students s JOIN enroll e ON s.id = e.s_id;</code>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Info Footer -->
+          <div class="project-card-footer">
+            <div class="project-text-group">
+              <h3 class="project-card-name">STUDENT INFORMATION SCHEMA</h3>
+              <p class="project-card-category">Database Design & MySQL</p>
+              <p class="project-card-details">
+                Relational schema modeled to structure student records, enrollment workflows, table normalization, and optimized SQL queries.
+              </p>
+            </div>
+            <a href="#contact" class="project-action-btn" aria-label="View Project">
+              <span class="action-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 3: BENTO 3-COLUMN GRID
+       Matching reference layout:
+       Col 1: MY TOOLKIT (3x3 Grid of Tech Skills)
+       Col 2: EDUCATION & EXPERIENCE (Vertical Timeline nodes 01-04)
+       Col 3: "LET'S BUILD SOMETHING TOGETHER" (Luxury Accent CTA card)
+       ======================================================================== -->
+  <section class="content-section" id="toolkit">
+    <div class="section-wrapper">
+      
+      <div class="bento-three-columns">
+        
+        <!-- COLUMN 1: MY TOOLKIT -->
+        <div class="bento-col toolkit-col">
+          <h2 class="block-title bento-title">MY TOOLKIT</h2>
+          
+          <div class="tools-grid-3x3">
+            
+            <!-- Tool 1: MySQL -->
+            <div class="tool-tile">
+              <div class="tool-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                </svg>
+              </div>
+              <span class="tool-name">MySQL</span>
+            </div>
+
+            <!-- Tool 2: SQL -->
+            <div class="tool-tile">
+              <div class="tool-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 7V4h16v3"/>
+                  <path d="M9 20h6"/>
+                  <path d="M12 4v16"/>
+                </svg>
+              </div>
+              <span class="tool-name">SQL</span>
+            </div>
+
+            <!-- Tool 3: Database Design -->
+            <div class="tool-tile">
+              <div class="tool-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <path d="M3 9h18"/>
+                  <path d="M9 21V9"/>
+                </svg>
+              </div>
+              <span class="tool-name">DB Design</span>
+            </div>
+
+            <!-- Tool 4: HTML5 -->
+            <div class="tool-tile">
+              <div class="tool-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 3l1.8 15.5L12 21l6.2-2.5L20 3H4z"/>
+                </svg>
+              </div>
+              <span class="tool-name">HTML5</span>
+            </div>
+
+            <!-- Tool 5: CSS3 -->
+            <div class="tool-tile">
+              <div class="tool-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 3l1.8 15.5L12 21l6.2-2.5L20 3H4z"/>
+                  <path d="M8 8h8l-.5 4H8.5l.3 3 3.2.8 3.2-.8.3-2"/>
+                </svg>
+              </div>
+              <span class="tool-name">CSS3</span>
+            </div>
+
+            <!-- Tool 6: JavaScript -->
+            <div class="tool-tile">
+              <div class="tool-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <path d="M16 8v8"/>
+                  <path d="M12 12a4 4 0 0 0-4 4"/>
+                </svg>
+              </div>
+              <span class="tool-name">JavaScript</span>
+            </div>
+
+            <!-- Tool 7: GitHub -->
+            <div class="tool-tile">
+              <div class="tool-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+              </div>
+              <span class="tool-name">GitHub</span>
+            </div>
+
+            <!-- Tool 8: VS Code -->
+            <div class="tool-tile">
+              <div class="tool-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="tool-name">VS Code</span>
+            </div>
+
+            <!-- Tool 9: XAMPP -->
+            <div class="tool-tile">
+              <div class="tool-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                  <line x1="6" y1="6" x2="6.01" y2="6"/>
+                  <line x1="6" y1="18" x2="6.01" y2="18"/>
+                </svg>
+              </div>
+              <span class="tool-name">XAMPP</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- COLUMN 2: EDUCATION & EXPERIENCE (Vertical Timeline) -->
+        <div class="bento-col experience-col" id="experience">
+          <h2 class="block-title bento-title">EDUCATION & EXP</h2>
+          
+          <div class="process-timeline-list">
+            
+            <!-- Node 01: ICCT Colleges -->
+            <div class="timeline-step-row">
+              <div class="step-badge-wrap">
+                <span class="circle-badge">01</span>
+                <span class="timeline-line"></span>
+              </div>
+              <div class="step-text-content">
+                <span class="step-tag-pill">ICCT COLLEGES FOUNDATION INC.</span>
+                <h4 class="step-title">Bachelor of Science in Computer Engineering</h4>
+                <p class="step-desc">
+                  Cainta Campus. Developing core knowledge in programming, computer hardware, networking, electronics, and system development.
+                </p>
+              </div>
+            </div>
+
+            <!-- Node 02: Database Management -->
+            <div class="timeline-step-row">
+              <div class="step-badge-wrap">
+                <span class="circle-badge">02</span>
+                <span class="timeline-line"></span>
+              </div>
+              <div class="step-text-content">
+                <span class="step-tag-pill">DATABASE MANAGEMENT & SQL</span>
+                <h4 class="step-title">Academic Database Projects</h4>
+                <p class="step-desc">
+                  Developing hands-on expertise in MySQL, database normalization, table relationships, and SQL querying for fast, accurate data retrieval.
+                </p>
+              </div>
+            </div>
+
+            <!-- Node 03: Web Integration -->
+            <div class="timeline-step-row">
+              <div class="step-badge-wrap">
+                <span class="circle-badge">03</span>
+                <span class="timeline-line"></span>
+              </div>
+              <div class="step-text-content">
+                <span class="step-tag-pill">APPLICATION SUPPORT</span>
+                <h4 class="step-title">Web & System Development</h4>
+                <p class="step-desc">
+                  Learning how databases power web applications like COE-Pay by organizing, storing, and retrieving information through responsive interfaces.
+                </p>
+              </div>
+            </div>
+
+            <!-- Node 04: DBA Aspiration -->
+            <div class="timeline-step-row">
+              <div class="step-badge-wrap">
+                <span class="circle-badge">04</span>
+              </div>
+              <div class="step-text-content">
+                <span class="step-tag-pill">CAREER OBJECTIVE</span>
+                <h4 class="step-title">Database Administrator (DBA)</h4>
+                <p class="step-desc">
+                  Aspiring to design, maintain, and secure robust database systems that help applications operate efficiently and protect critical data.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- COLUMN 3: LET'S BUILD SOMETHING TOGETHER (CTA Box) -->
+        <div class="bento-col cta-banner-col">
+          <div class="luxury-cta-inner">
+            <h3 class="cta-banner-heading">
+              LET'S BUILD<br>SOMETHING<br>RELIABLE<br>TOGETHER.
+              <span class="cta-sparkle">✦</span>
+            </h3>
+            <p class="cta-banner-copy">
+              Interested in database management, optimized SQL queries, or backend systems? I am open to new learning opportunities and collaborations.
+            </p>
+            <a href="#contact" class="cta-primary-btn">
+              <span>GET IN TOUCH</span>
+              <span class="cta-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 4: CONTACT & FOOTER
+       ======================================================================== -->
+  <section class="content-section alternate-bg" id="contact">
+    <div class="section-wrapper contact-wrapper">
+      <div class="section-badge">GET IN TOUCH</div>
+      <h2 class="section-title">Let's discuss database systems & engineering</h2>
+      <p class="contact-sub">Have an inquiry, project, or opportunity? Drop me a line and let's connect.</p>
+      
+      <div class="contact-cta-box">
+        <a href="mailto:pearlalexa.cpe@gmail.com" class="work-cta-btn large-cta">
+          <span>pearlalexa.cpe@gmail.com</span>
+          <span class="arrow-glyph">→</span>
+        </a>
+      </div>
+
+      <div class="social-links-row">
+        <a href="https://github.com" target="_blank" rel="noopener" class="social-link">GitHub</a>
+        <span class="social-divider">•</span>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+        <span class="social-divider">•</span>
+        <a href="#home" class="social-link">ICCT Colleges</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-wrapper">
+      <div class="footer-left">
+        © 2026 Pearl Alexa Catequista — Computer Engineering & Database Systems
+      </div>
+      <div class="footer-right">
+        Engineered with Precision & Data Integrity
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
